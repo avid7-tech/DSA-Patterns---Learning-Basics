@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n;
+
+    int i = 1;
+    while (i <= n)
+    {
+        // triangle 1
+        int j = i;
+        int value = 1;
+        while (j <= n)
+        {
+            cout << value;
+            value++;
+            j++;
+        }
+
+        // triangle 2
+
+        j = 1;
+        while (j <= i - 1)
+        {
+            cout << "*";
+            j++;
+        }
+
+        // triangle 3
+
+        j = 1;
+        while (j <= i - 1)
+        {
+            cout << "*";
+            j++;
+        }
+
+        // triangle 4
+
+        j = 1;
+        int value1 = n-i+1;
+
+        while (j <= n - i + 1)
+        {
+            cout << value1;
+            j++;
+            value1--;
+        }
+
+        cout << endl;
+        i++;
+    }
+
+    return 0;
+}
